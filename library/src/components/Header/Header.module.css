@@ -1,0 +1,39 @@
+
+.header_wrapper {
+  padding-top: 1rem;
+  display: flex;
+  height: 15rem;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 2px solid #6c93b3;
+  background-image: url('../../assets/img/title-book.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: white;
+}
+.header_title {
+  font-size: 1.9rem;
+}
+.header__select_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.select_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.select_title {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 380px) {
+  .header__select_wrapper {
+    gap: 0px;
+  }
+}

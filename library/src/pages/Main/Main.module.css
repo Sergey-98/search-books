@@ -1,0 +1,28 @@
+.main_wrapper {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: rgb(26, 26, 26);
+}
+.main__total_items {
+  color: white;
+}
+.main__cards_wrapper {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.main__load_more {
+  margin: 0 auto 1rem auto;
+  padding: 0.5rem 0;
+  color: black;
+  width: 10rem;
+  border: 1px solid white;
+
+}
+.main__loading {
+  color: white;
+}
