@@ -14,7 +14,8 @@ export default function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-        <AppRouter />
+        {stateValues.isLoading ? <h1 className="main__loading">Загрузка...</h1> : null}
+        {stateValues.totalItems !== -1 ? <AppRouter /> : null}
       </BrowserRouter>
     </div>
   );

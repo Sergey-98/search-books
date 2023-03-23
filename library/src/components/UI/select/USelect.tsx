@@ -1,8 +1,8 @@
 import React from 'react';
 import classes from './USelect.module.css';
-import { HeaderProps } from 'types/types';
+import { SelectProps } from 'types/types';
 
-export default function Select(props: HeaderProps) {
+export default function Select(props: SelectProps) {
   return (
     <select
       defaultValue={props.propsValues[0]}

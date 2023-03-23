@@ -34,6 +34,16 @@
   color: #61dafb;
 }
 
+/* .main__loading {
+  color: white;
+  position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+} */
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

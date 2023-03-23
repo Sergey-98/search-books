@@ -1,6 +1,59 @@
+.myInput_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .myInput {
-  width: 30%;
-  padding: 5px 40px;
-  margin: 7px;
+  width: 40%;
+  height: 2rem;
+  padding: 5px 15px;
   border: 2px solid #4682B4;
+  font-size: 1.1rem;
+}
+.myInput_searchButton {
+  width: 2rem;
+  height: 2rem;
+  margin: auto 0; 
+  background: none;
+  border: 2px solid #4682B4;
+  border-left: none;
+  background-image: url(../../../assets/svg/search.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70% 70%;
+  background-color: white;
+}
+.myInput_searchButton:hover {
+  cursor:pointer;
+}
+.myInput_searchButton:active {
+  background-color: #4682B4;
+}
+.myInput_close {
+  width: 2rem;
+  height: 2rem;
+  margin: auto 0;
+  position: absolute;
+  right: 32%;
+  background-image: url(../../../assets/svg/close.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70% 70%;
+}
+.myInput_close:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 380px) {
+  .myInput {
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
+  .myInput_searchButton {
+    background-size: 60% 60%;
+  }
+  .myInput_close {
+    background-size: 60% 60%;
+    right: 35%;
+  }
 }

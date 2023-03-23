@@ -1,12 +1,35 @@
 import axios from 'axios';
 
-const _apiKey = '29f929b223daa678d61e9c7543364c5e';
-const _url = 'https://gateway.marvel.com:443/v1/public/';
-export function getFilms(answer: string) {
-  return axios.get(`http://www.omdbapi.com/?apikey=7347c4fe&s=${answer}`);
+const _apiKey = 'AIzaSyDFzxMPmVWRfO1L6ug8mRuzlLLHeL3b67Y';
+const _url = 'https://www.googleapis.com/books/v1/volumes';
+const maxResult = 30;
+
+export async function getBooks(searchValue: string, sorting: string, page: number, filter: string) {
+  const categoryQuery = filter === 'all' ? '' : `+subject:${filter}`;
+  const intitleQuery = `+intitle:${searchValue}`;
+  console.log('---', searchValue, sorting, page, filter);
+  try {
+    const response = await fetch(
+      `${_url}?q=${intitleQuery}${categoryQuery}:&orderBy=${sorting}&startIndex=${
+        page * maxResult
+      }&maxResults=${maxResult}&key=${_apiKey}`
+    );
+    if (!response.ok) {
+      alert('Error');
+    }
+    const responseData = await response.json();
+    // console.log('responce', responseData);
+    return responseData;
+  } catch {
+    alert('Error');
+  }
+  // return await axios.get(
+  //   `${_url}?q=${intitleQuery}${categoryQuery}:&orderBy=${sorting}&startIndex=${
+  //     page * maxResult
+  //   }&maxResults=${maxResult}&key=${_apiKey}`
+  // );
 }
 
-export async function getAllComics(limit: number, offset: number) {
-  return (await axios.get(`${_url}comics?&limit=${limit}&offset=${offset}&apikey=${_apiKey}`)).data
-    .data.results;
+export async function getOneBook(id: string) {
+  return await axios.get(`${_url}/${id}`);
 }
