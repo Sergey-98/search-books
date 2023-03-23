@@ -9,7 +9,6 @@ import AppRouter from 'components/AppRouter';
 
 export default function App() {
   const stateValues = useSelector<RootState, State>((state) => state);
-  console.log(stateValues);
   return (
     <div className="App">
       <BrowserRouter>

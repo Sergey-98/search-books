@@ -6,7 +6,6 @@ import { State } from '../../types/types';
 
 export default function OneBook() {
   const stateValues = useSelector<RootState, State>((state) => state);
-  console.log(stateValues.bookData);
   return (
     <div className={styles.one_book__wrapper}>
       <div className={styles.book__img_wrapper}>

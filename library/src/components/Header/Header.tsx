@@ -27,12 +27,10 @@ export default function Header() {
   const updateCategory = (event: React.ChangeEvent<HTMLSelectElement>) => {
     dispatchRedux(updateCategories({ categories: event.target.value }));
     searchBooks();
-    console.log(stateValues);
   };
   const updateSort = (event: React.ChangeEvent<HTMLSelectElement>) => {
     dispatchRedux(updateSorting({ sorting: event.target.value }));
     searchBooks();
-    console.log(stateValues);
   };
   const searchBooks = async () => {
     if (!stateValues.searchBooksList) {

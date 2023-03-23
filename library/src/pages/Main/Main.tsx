@@ -17,7 +17,6 @@ export default function Main() {
   const navigate = useNavigate();
   const stateValues = useSelector<RootState, State>((state) => state);
   const dispatchRedux = useDispatch();
-  console.log(stateValues.searchBooksList);
   const openBook = async (bookID: string) => {
     dispatchRedux(setIsLoading({ isLoading: true }));
     const book = await getOneBook(bookID);
@@ -26,7 +25,6 @@ export default function Main() {
     dispatchRedux(setIsLoading({ isLoading: false }));
   };
   const loadBooks = async () => {
-    console.log(stateValues.page);
     if (stateValues.searchValue && stateValues.sorting && stateValues.page) {
       const newPage = stateValues.page + 1;
       dispatchRedux(setPage({ page: newPage }));
