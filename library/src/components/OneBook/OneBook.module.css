@@ -1,0 +1,17 @@
+.one_book__wrapper {
+  /* width: 13rem; */
+  height: 60vh;
+  display: flex;
+  /* flex-direction: column; */
+  background-color: rgb(196, 196, 196);
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.card__text_wrapper {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
